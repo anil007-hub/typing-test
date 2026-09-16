@@ -83,6 +83,34 @@
   };
 </script>
 <script src="https://underminestudiedboot.com/dd710abb575d3dab8503ae7235281c71/invoke.js"></script>
+  <div style="display:flex;justify-content:center;gap:15px;flex-wrap:wrap;margin:20px 0;">
+  <div>WPM: <span id="wpm">0</span></div>
+  <div>Accuracy: <span id="accuracy">100</span>%</div>
+  <div>Errors: <span id="errors">0</span></div>
+</div>
+
+<script>
+function updateStats() {
+  const input = document.querySelector("textarea, input[type='text']");
+  if (!input) return;
+
+  const text = input.value;
+  const words = text.trim() ? text.trim().split(/\s+/).length : 0;
+
+  const elapsed = window.startTime
+    ? (Date.now() - window.startTime) / 60000
+    : 0;
+
+  const wpm = elapsed > 0 ? Math.round(words / elapsed) : 0;
+
+  document.getElementById("wpm").textContent = wpm;
+}
+
+document.addEventListener("input", function() {
+  if (!window.startTime) window.startTime = Date.now();
+  updateStats();
+});
+</script>
 </body><script>
   atOptions = {
     'key' : 'dd710abb575d3dab8503ae7235281c71',
