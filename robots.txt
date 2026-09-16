@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://anil007-hub.github.io/typing-test/sitemap.xml
