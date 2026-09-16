@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Free typing speed test. Measure WPM and accuracy in seconds.">
+<title>TypingTest Pro — Free Typing Speed Test</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<header class="topbar">
+  <div class="brand">⌨️ TypingTest <span>Pro</span></div>
+  <button id="themeBtn" class="ghost">🌙</button>
+</header>
+
+<main>
+  <section class="hero">
+    <p class="eyebrow">FREE ONLINE TYPING TEST</p>
+    <h1>Test your typing speed</h1>
+    <p>Type the text below as accurately and quickly as you can.</p>
+  </section>
+
+  <section class="ad ad-top">ADVERTISEMENT</section>
+
+  <section class="card">
+    <div class="controls">
+      <div class="modes">
+        <button class="time active" data-time="15">15s</button>
+        <button class="time" data-time="30">30s</button>
+        <button class="time" data-time="60">60s</button>
+      </div>
+      <button id="restart" class="secondary">↻ Restart</button>
+    </div>
+
+    <div class="stats">
+      <div><b id="time">15</b><small>TIME</small></div>
+      <div><b id="wpm">0</b><small>WPM</small></div>
+      <div><b id="accuracy">100%</b><small>ACCURACY</small></div>
+      <div><b id="errors">0</b><small>ERRORS</small></div>
+    </div>
+
+    <div id="quote" class="quote" aria-label="Text to type"></div>
+    <textarea id="input" placeholder="Click here and start typing..." spellcheck="false" autocomplete="off" autocapitalize="off"></textarea>
+    <button id="start" class="start">Start Typing</button>
+    <div id="result" class="result hidden"></div>
+  </section>
+
+  <section class="ad ad-bottom">ADVERTISEMENT</section>
+
+  <section class="info">
+    <h2>How does the typing test work?</h2>
+    <p>Choose a test duration, start typing, and get your words per minute (WPM), accuracy and error count instantly. Your best score is saved on this device.</p>
+  </section>
+</main>
+
+<footer>© 2026 TypingTest Pro · Free typing practice</footer>
+<script src="script.js"></script>
+</body>
+</html>
